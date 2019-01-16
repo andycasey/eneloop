@@ -1,86 +1,7 @@
-%%
-%% Beginning of file 'sample62.tex'
-%%
-%% Modified 2018 January
-%%
-%% This is a sample manuscript marked up using the
-%% AASTeX v6.2 LaTeX 2e macros.
-%%
-%% AASTeX is now based on Alexey Vikhlinin's emulateapj.cls 
-%% (Copyright 2000-2015).  See the classfile for details.
 
-%% AASTeX requires revtex4-1.cls (http://publish.aps.org/revtex4/) and
-%% other external packages (latexsym, graphicx, amssymb, longtable, and epsf).
-%% All of these external packages should already be present in the modern TeX 
-%% distributions.  If not they can also be obtained at www.ctan.org.
+%@arxiver{diagram.pdf,figure3.pdf}
 
-%% The first piece of markup in an AASTeX v6.x document is the \documentclass
-%% command. LaTeX will ignore any data that comes before this command. The 
-%% documentclass can take an optional argument to modify the output style.
-%% The command below calls the preprint style  which will produce a tightly 
-%% typeset, one-column, single-spaced document.  It is the default and thus
-%% does not need to be explicitly stated.
-%%
-%%
-%% using aastex version 6.2
 \documentclass[twocolumn]{aastex62}
-
-%% The default is a single spaced, 10 point font, single spaced article.
-%% There are 5 other style options available via an optional argument. They
-%% can be envoked like this:
-%%
-%% \documentclass[argument]{aastex62}
-%% 
-%% where the layout options are:
-%%
-%%  twocolumn   : two text columns, 10 point font, single spaced article.
-%%                This is the most compact and represent the final published
-%%                derived PDF copy of the accepted manuscript from the publisher
-%%  manuscript  : one text column, 12 point font, double spaced article.
-%%  preprint    : one text column, 12 point font, single spaced article.  
-%%  preprint2   : two text columns, 12 point font, single spaced article.
-%%  modern      : a stylish, single text column, 12 point font, article with
-%% 		  wider left and right margins. This uses the Daniel
-%% 		  Foreman-Mackey and David Hogg design.
-%%  RNAAS       : Preferred style for Research Notes which are by design 
-%%                lacking an abstract and brief. DO NOT use \begin{abstract}
-%%                and \end{abstract} with this style.
-%%
-%% Note that you can submit to the AAS Journals in any of these 6 styles.
-%%
-%% There are other optional arguments one can envoke to allow other stylistic
-%% actions. The available options are:
-%%
-%%  astrosymb    : Loads Astrosymb font and define \astrocommands. 
-%%  tighten      : Makes baselineskip slightly smaller, only works with 
-%%                 the twocolumn substyle.
-%%  times        : uses times font instead of the default
-%%  linenumbers  : turn on lineno package.
-%%  trackchanges : required to see the revision mark up and print its output
-%%  longauthor   : Do not use the more compressed footnote style (default) for 
-%%                 the author/collaboration/affiliations. Instead print all
-%%                 affiliation information after each name. Creates a much
-%%                 long author list but may be desirable for short author papers
-%%
-%% these can be used in any combination, e.g.
-%%
-%% \documentclass[twocolumn,linenumbers,trackchanges]{aastex62}
-%%
-%% AASTeX v6.* now includes \hyperref support. While we have built in specific
-%% defaults into the classfile you can manually override them with the
-%% \hypersetup command. For example,
-%%
-%%\hypersetup{linkcolor=red,citecolor=green,filecolor=cyan,urlcolor=magenta}
-%%
-%% will change the color of the internal links to red, the links to the
-%% bibliography to green, the file links to cyan, and the external links to
-%% magenta. Additional information on \hyperref options can be found here:
-%% https://www.tug.org/applications/hyperref/manual.html#x1-40003
-%%
-%% If you want to create your own macros, you can do so
-%% using \newcommand. Your macros should appear before
-%% the \begin{document} command.
-%%
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{color}
@@ -91,7 +12,6 @@
 \newcommand\latex{La\TeX}
 
 \newcommand{\SampleSize}{2,330} 
-\newcommand{\todo}[1]{\textcolor{red}{#1}} % \todo: remove
 
 \newcommand\lamost{LAMOST}
 \newcommand\apogee{APOGEE}
@@ -109,110 +29,18 @@
 \graphicspath{{figures/}}
 
 
-%% Reintroduced the \received and \accepted commands from AASTeX v5.2
 \received{January X, 2019}
 \revised{January X, 2019}
-\accepted{\today}
-%% Command to document which AAS Journal the manuscript was submitted to.
-%% Adds "Submitted to " the arguement.
+\accepted{January X, 2025}
 \submitjournal{AAS Journals}
 
-%% Mark up commands to limit the number of authors on the front page.
-%% Note that in AASTeX v6.2 a \collaboration call (see below) counts as
-%% an author in this case.
-%
-%\AuthorCollaborationLimit=3
-%
-%% Will only show Schwarz, Muench and "the AAS Journals Data Scientist 
-%% collaboration" on the front page of this example manuscript.
-%%
-%% Note that all of the author will be shown in the published article.
-%% This feature is meant to be used prior to acceptance to make the
-%% front end of a long author article more manageable. Please do not use
-%% this functionality for manuscripts with less than 20 authors. Conversely,
-%% please do use this when the number of authors exceeds 40.
-%%
-%% Use \allauthors at the manuscript end to show the full author list.
-%% This command should only be used with \AuthorCollaborationLimit is used.
-
-%% The following command can be used to set the latex table counters.  It
-%% is needed in this document because it uses a mix of latex tabular and
-%% AASTeX deluxetables.  In general it should not be needed.
-%\setcounter{table}{1}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
-%% The following section outlines numerous optional output that
-%% can be displayed in the front matter or as running meta-data.
-%%
-%% If you wish, you may supply running head information, although
-%% this information may be modified by the editorial offices.
 \shorttitle{Tidal interactions between binary stars can drive lithium production in low-mass red giants}
 \shortauthors{Casey et al.}
-%%
-%% You can add a light gray and diagonal water-mark to the first page 
-%% with this command:
-% \watermark{text}
-%% where "text", e.g. DRAFT, is the text to appear.  If the text is 
-%% long you can control the water-mark size with:
-%  \setwatermarkfontsize{dimension}
-%% where dimension is any recognized LaTeX dimension, e.g. pt, in, etc.
-%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% This is the end of the preamble.  Indicate the beginning of the
-%% manuscript itself with \begin{document}.
 
 \begin{document}
 
 \title{Tidal interactions between binary stars can drive lithium production in low-mass red giants}
-
-%% LaTeX will automatically break titles if they run longer than
-%% one line. However, you may use \\ to force a line break if
-%% you desire. In v6.2 you can include a footnote in the title.
-
-%% A significant change from earlier AASTEX versions is in the structure for 
-%% calling author and affilations. The change was necessary to implement 
-%% autoindexing of affilations which prior was a manual process that could 
-%% easily be tedious in large author manuscripts.
-%%
-%% The \author command is the same as before except it now takes an optional
-%% arguement which is the 16 digit ORCID. The syntax is:
-%% \author[xxxx-xxxx-xxxx-xxxx]{Author Name}
-%%
-%% This will hyperlink the author name to the author's ORCID page. Note that
-%% during compilation, LaTeX will do some limited checking of the format of
-%% the ID to make sure it is valid.
-%%
-%% Use \affiliation for affiliation information. The old \affil is now aliased
-%% to \affiliation. AASTeX v6.2 will automatically index these in the header.
-%% When a duplicate is found its index will be the same as its previous entry.
-%%
-%% Note that \altaffilmark and \altaffiltext have been removed and thus 
-%% can not be used to document secondary affiliations. If they are used latex
-%% will issue a specific error message and quit. Please use multiple 
-%% \affiliation calls for to document more than one affiliation.
-%%
-%% The new \altaffiliation can be used to indicate some secondary information
-%% such as fellowships. This command produces a non-numeric footnote that is
-%% set away from the numeric \affiliation footnotes.  NOTE that if an
-%% \altaffiliation command is used it must come BEFORE the \affiliation call,
-%% right after the \author command, in order to place the footnotes in
-%% the proper location.
-%%
-%% Use \email to set provide email addresses. Each \email will appear on its
-%% own line so you can put multiple email address in one \email call. A new
-%% \correspondingauthor command is available in V6.2 to identify the
-%% corresponding author of the manuscript. It is the author's responsibility
-%% to make sure this name is also in the author list.
-%%
-%% While authors can be grouped inside the same \author and \affiliation
-%% commands it is better to have a single author for each. This allows for
-%% one to exploit all the new benefits and should make book-keeping easier.
-%%
-%% If done correctly the peer review system will be able to
-%% automatically put the author and affiliation information from the manuscript
-%% and save the corresponding author the trouble of entering it by hand.
 
 \correspondingauthor{Andrew R. Casey}
 \email{andrew.casey@monash.edu}
@@ -223,8 +51,6 @@
 \affil{Faculty of Information Technology,
 	   Monash University, Clayton 3800, Victoria, Australia}
 	   
-
-
 \author{Anna~Y.~Q.~Ho}
 \affil{Cahill Center for Astrophysics, California Institute of Technology, 
        MC 249-17, 1200 E California Blvd, Pasadena, CA, 91125, USA}
@@ -290,50 +116,6 @@
 	   3400 N Charles St., Baltimore, MD 21218, USA}
 
 
-%\author[0000-0002-0786-7307]{Greg J. Schwarz}
-%\affil{American Astronomical Society \\
-%2000 Florida Ave., NW, Suite 300 \\
-%Washington, DC 20009-1231, USA}
-
-%\author{August Muench}
-%\affiliation{American Astronomical Society \\
-%2000 Florida Ave., NW, Suite 300 \\
-%Washington, DC 20009-1231, USA}
-%\collaboration{(AAS Journals Data Scientists collaboration)}
-
-%\author{Butler Burton}
-%\affiliation{National Radio Astronomy Observatory}
-%\affiliation{AAS Journals Associate Editor-in-Chief}
-%\nocollaboration
-
-%\author{Amy Hendrickson}
-%\altaffiliation{Creator of AASTeX v6.2}
-%\affiliation{TeXnology Inc.}
-%\collaboration{(LaTeX collaboration)}
-
-%\author{Julie Steffen}
-%\affiliation{AAS Director of Publishing}
-%\affiliation{American Astronomical Society \\
-%2000 Florida Ave., NW, Suite 300 \\
-%Washington, DC 20009-1231, USA}
-
-%\author{Jeff Lewandowski}
-%\affiliation{IOP Senior Publisher for the AAS Journals}
-%\affiliation{IOP Publishing, Washington, DC 20005}
-
-%% Note that the \and command from previous versions of AASTeX is now
-%% depreciated in this version as it is no longer necessary. AASTeX 
-%% automatically takes care of all commas and "and"s between authors names.
-
-%% AASTeX 6.2 has the new \collaboration and \nocollaboration commands to
-%% provide the collaboration status of a group of authors. These commands 
-%% can be used either before or after the list of corresponding authors. The
-%% argument for \collaboration is the collaboration identifier. Authors are
-%% encouraged to surround collaboration identifiers with ()s. The 
-%% \nocollaboration command takes no argument and exists to indicate that
-%% the nearby authors are not part of surrounding collaborations.
-
-%% Mark off the abstract in the ``abstract'' environment. 
 \begin{abstract}
 Theoretical models of stellar evolution predict that most of the lithium inside
 a star is destroyed as the star becomes a red giant. 
@@ -350,34 +132,17 @@ that most lithium-rich giants have helium-burning cores ($80^{+7}_{-6}\%$), and 
 of lithium-rich giants rises with increasing stellar metallicity. We find that 
 while planet accretion may explain some lithium-rich giants, it 
 cannot account for the majority with helium-burning cores. We rule out most other 
-explanations for the origin of lithium-rich giants. Our analysis shows that
+proposed explanations for the origin of lithium-rich giants. Our analysis shows that
 giants remain lithium-rich for only about two million years. A prediction from
 this lithium depletion timescale is that most lithium-rich giants with a helium-burning
 core have a binary companion.
 \end{abstract}
 
-%% Keywords should appear after the \end{abstract} command. 
-%% See the online documentation for the full list of available subject
-%% keywords and the rules for their use.
-\keywords{stars}
-
-%% From the front matter, we move on to the body of the paper.
-%% Sections are demarcated by \section and \subsection, respectively.
-%% Observe the use of the LaTeX \label
-%% command after the \subsection to give a symbolic KEY to the
-%% subsection for cross-referencing in a \ref command.
-%% You can use LaTeX's \ref and \label commands to keep track of
-%% cross-references to sections, equations, tables, and figures.
-%% That way, if you change the order of any elements, LaTeX will
-%% automatically renumber them.
-%%
-%% We recommend that authors also use the natbib \citep
-%% and \citet commands to identify citations.  The citations are
-%% tied to the reference list via symbolic KEYs. The KEY corresponds
-%% to the KEY in the \bibitem in the reference list below. 
+\keywords{stars: abundances 
+	  --- stars: low-mass 
+	  --- (stars:) binaries: general}
 
 \section{Introduction} \label{sec:intro}
-
 
 Stellar evolution theory suggests that material from inner layers,
 where the element composition has been altered by nuclear reactions, is
@@ -394,7 +159,7 @@ mechanism \citep{Charbonnel_2000}. However, the temperature required to
 produce lithium is also sufficient to destroy it: helium isotopes must be 
 fused together at high temperatures to produce beryllium-7, and beryllium-7
 must be transported to cooler regions where lithium can form by 
-electron capture without being immediately destroyed \citep{Cameron_1971}. % JCL: by proton capture
+electron capture without being immediately destroyed by proton capture \citep{Cameron_1971}. 
 These strict requirements make lithium extremely sensitive to the structure
 and mixing inside a star. Standard theoretical models cannot produce
 appreciable net amounts of lithium for red giant branch stars. This has prompted several descriptions of
@@ -413,7 +178,7 @@ and when lithium production occurs, and how long stars remain lithium-rich.
 \subsection{Spectroscopy}
 
 We identified candidate lithium-rich giant stars using public spectra from 
-the \lamost\ survey \citep{Luo_2015}. Specifically, we searched for significant
+the \lamost\ survey \citep[Data Release 2;][]{Luo_2015}. Specifically, we searched for significant
 deviations between the continuum-normalised rest-frame spectrum 
 and a best-fit spectrum from a data-driven model \citep[Figure~\ref{fig:spectrum};][]{Ho_2017a,Ho_2017b}. We applied a gaussian matched filter to the 
 residuals between the model and the data at the 6707\,\AA\ lithium doublet 
@@ -442,8 +207,7 @@ young stars, either through chromospheric activity indicated by emission
 in H$\alpha$, or significant photometric variability indicating star 
 spots \citep{McQuillan_2014}. We found that most stars with these signatures were
 spatially concentrated in known young star-forming regions or at low 
-absolute Galactic latitudes. Our distilled sample contains \SampleSize\ 
-lithium-rich giant stars.
+absolute Galactic latitudes. 
 
 %In Extended Data Figure 2 we show the spatial
 %coverage of \lamost, and the sky positions of all lithium-rich giant stars
@@ -457,8 +221,9 @@ VALD database of transitions \citep{Piskunov_1995}, and the \texttt{iSpec}
 \citep{Blanco_Cuaresma_2014} wrapper of the \texttt{SME} synthesis package \citep{Valenti_1996}.
 Using the standard nomenclature of 
 $A({\rm Li}) = \log_{10}(N_{\rm Li}/N_{H}) + 12$, where $N_X$ refers to the
-number density of atoms of a species, we excluded stars with $A({\rm Li}) < 1.5$
-as being lithium-normal. We show the distribution of $A({\rm Li})$ for all 
+number density of atoms of a species, we excluded 15 stars with $A({\rm Li}) < 1.5$
+as being lithium-normal. Our distilled sample contains \SampleSize\ 
+lithium-rich giant stars. We show the distribution of $A({\rm Li})$ for these 
 lithium-rich giants in Figure~\ref{fig:li_distribution}.
 
 We find that two of our lithium-rich giants are rediscoveries:
@@ -473,27 +238,23 @@ SDSS~J0654+4200, in good agreement with the previously reported
 value of $A({\rm Li})~=~3.3~\pm~0.2$. We also note that \lamost\ obtained a high signal-to-noise
 ratio spectrum for another known lithium-rich giant star \citep[SDSS~J0304+3823;][]{Martell_2013}, 
 but this was not included in our sample because the residuals surrounding the
-lithium doublet at 6707\,\AA\ reached $2.7\sigma$ and did not meet our $3\sigma$
+lithium doublet at 6707\,\AA\ reached only $2.7\sigma$, and did not meet our $3\sigma$
 threshold for detection.
 
 
-The data-driven model we employed also provides estimates of [C/N] abundance
+The data-driven model we employed also provides estimates of [C/H] and [N/H] abundance
 ratios for all \lamost\ spectra. We found that 30 of our lithium-rich 
 ($A({\rm Li}) > 1.5$) giants at the base of the giant branch 
 ($\logg > 3.2$) have $[{\rm C/N}] > 0$, which indicates that first dredge up may not have finished and therefore lithium is not expected to be fully depleted.
 We include these candidates in our sample but caution that first 
 dredge up may not have finished and this may explain their high
 lithium content. We estimated stellar masses from stellar parameters and 
-[C/N] abundance ratios for 1,374 of our lithium-rich giants, where their 
+[C,N/H] abundance ratios for 1,374 of our lithium-rich giants, where their 
 stellar parameters and abundance ratios are in the valid range for existing 
 empirical relationships \citep{Martig_2016}. These inferred masses indicate 
 that most of our sample are low-mass (1 to 3$M_\odot$) red giant stars.
 
 
- 
-
-%% stars using empirical relationships between carbon abundances, nitrogen 
-%% abundances, and stellar masses \citep{Martig_2016}.
 %% In Table 1 (Supplementary Information) we include the positions and parameters ($T_{\rm eff}$,
 %% $\log_{10}{g}$, [Fe/H], [$\alpha$/Fe], [C/Fe], [N/Fe], A({\rm Li}), mass, age) 
 %% we infer from \lamost\ spectra, as well as asteroseismic parameters 
@@ -502,26 +263,8 @@ that most of our sample are low-mass (1 to 3$M_\odot$) red giant stars.
 
 
 
+\subsection{Asteroseismology}
 
-
-% TODO: Consider where to put this,....
-%% 
-
-
-% TODO: Comment on TYC etc etc
-
-
-
-
-% TODO: Cite Hon?
-
-\subsection{Asteroseismology} % TODO: call it asteroseismology?
-
-
-%Giant stars exhibit oscillations that behave like pressure modes in the envelope
-%of a star and like gravity modes in the core. The period spacing between 
-%the gravity modes can reveal the presence of a helium-burning core 
-%(Figure~\ref{fig:figure1}c). 
 
 Asteroseismology confirms the results we derive from spectroscopy. 
 The evolutionary states for 23 of our lithium-rich giants could be unambiguously determined
@@ -548,7 +291,7 @@ have both high quality \lamost\ spectra and high fidelity asteroseismic labels. 
 data as a training set, we modelled the flux in each \lamost\ pixel as a second-order quadratic function
 of the stellar labels ($T_{\rm eff}$, $\logg$, $[{\rm Fe}/{\rm H}]$, $\delta\nu$, and $\Delta\Pi_1$)
 and a single noise term per pixel. At the test step we classified a star as having a helium-burning core if 
-the estimated $\Delta\Pi_1 > 150\,{\rm s}$. We performed cross-validation experiments ($N_{trials} = 10$) 
+the estimated $\Delta\Pi_1 > 150\,{\rm s}$. We performed cross-validation experiments ($N_\textrm{trials} = 10$) 
 where we used a random 80\% of the training set as the labelled set and the remaining 20\% formed as a validation 
 set. From these experiments we find that our model can identify core-helium burning stars directly
 from \lamost\ spectra with an accuracy (recall) of 93.4\% (precision 96.9\%; F-measure 0.95). 
@@ -568,7 +311,7 @@ $f_{\rm CHeB} = 0.80^{+0.07}_{-0.06}$ for the remainder of this work.
 		\textbf{a.} Stellar parameters for all giants in \lamost\ (shown as logarithmic density in grey) and \SampleSize\ lithium-rich giants coloured by logarithmic density.
 		\textbf{b.} Infrared colour and absolute magnitude for 240 lithium-rich giants
 		with \gaia\ parallaxes. The density colour scale in panel (b) is matched to panel (a).
-		The entire \gaia--TGAS sample is shown in grey \citep{Gaia-Collaboration_2018,Anderson_2017}.
+		The entire \gaia--TGAS sample is shown in grey \citep{Gaia-Collaboration_2018,Anderson_2018}.
 		\textbf{c.} Asteroseismic period spacings for lithium-rich giants in the
 		\kepler\ field.  Marker shapes (circles \citep{Mosser_2012}, squares \citep{Stello_2013} and triangles \citep{Vrard_2016}) indicate the literature source. For context, we show 
 		asteroseismic properties of typical giant stars in grey \citep{Mosser_2012}.}
@@ -580,14 +323,14 @@ $f_{\rm CHeB} = 0.80^{+0.07}_{-0.06}$ for the remainder of this work.
 \subsection{Timescales}
 
 The relative timescales of different stages of stellar evolution are known with
-high precision. Without prescribing a specific mechanism for lithium 
+high precision. Without yet prescribing a mechanism for lithium 
 enrichment, our sample size allows us to infer when stars become lithium-rich,
 and how long they remain lithium-rich. We modelled the expected distribution 
 in in stellar parameters using evolutionary tracks \citep{Dotter_2016,Choi_2016}
-for three different scenarios where giants become lithium-rich:
+for three different scenarios where giants could become lithium-rich:
 \begin{enumerate}[(a)]
-	\item at the luminosity bump \citep{Charbonnel_2000},
-	\item at the tip of the red giant branch \citep{Lattanzio_2014}, or
+	\item at the luminosity bump \citep[e.g.,][]{Charbonnel_2000},
+	\item at the tip of the red giant branch \citep[e.g.,][]{Lattanzio_2014}, or
 	\item either during the core-helium burning phase or at a random time on the giant branch.
 \end{enumerate} 
 
@@ -598,7 +341,8 @@ estimated masses were excluded from this analysis, and we used asteroseismic mas
 where available in preference to masses inferred from carbon and nitrogen abundances. 
 For each tested scenario we assign a point along the selected evolutionary track 
 where the giant would become lithium-rich, and a time for which it remained 
-lithium-rich. By combining the lithium-rich sections of each track we calculate the normalised distribution 
+lithium-rich. Hereafter we refer to this timescale as the lithium depletion timescale. 
+By combining the lithium-rich sections of each track, we calculate the normalised distribution 
 of stellar parameters ($T_{\rm eff}$, $\log_{10}{g}$) we would expect to 
 observe for lithium-rich giant stars. For example, if stars become lithium-rich 
 at the luminosity bump and only remain lithium-rich for an instant then the expected
@@ -607,50 +351,33 @@ But if stars remain lithium-rich for say $10^8\,{\rm yr}$, long enough to evolve
 beyond the tip of the giant branch, then we would expect lithium-rich giants 
 throughout the upper red giant branch, and some fraction of them to have
 helium-burning cores.
-
-
-We first considered the two lithium production scenarios associated with stellar evolution
-events: the luminosity bump and the tip of the red giant branch. Lithium depletion timescales between $10^4\,{\rm yr}$ and $10^8\,{\rm yr}$ were 
+Lithium depletion timescales between $10^4\,{\rm yr}$ and $10^8\,{\rm yr}$ were 
 considered for all scenarios, and in each case we convolved the expected distribution in stellar 
-parameters with the median observational uncertainties. In scenario (a), lithium 
+parameters with the median observational uncertainties. 
+
+
+
+In scenario (a), lithium 
 production takes place at the luminosity bump on the giant branch. We identify the bump 
-as the first luminosity reversal (brightness decrease) on the giant branch.
-%and take the lithium onset phase as about $2.7\times10^7\,{\rm yr}$ before the bump. 
-Lithium depletion timescales of at least $10^8\,{\rm yr}$ are 
-required in this scenario to produce lithium-rich giants with helium-burning cores (Figure~\ref{fig:evtracks}a).
+as the first luminosity reversal (brightness decrease) that occurs on the giant branch in the evolutionary track.
+We find that lithium depletion timescales of at least $10^8\,{\rm yr}$ are 
+required to produce lithium-rich giants with helium-burning cores in this scenario (Figure~\ref{fig:evtracks}a), simply because this is the typical timescale needed for
+lithium-rich giants to evolve from the luminosity bump to the core helium-burning phase.
 However, any timescale of $10^8\,{\rm yr}$ (or longer) results in at most only 40\% of lithium-rich giants having helium-burning cores, half the $80^{+7}_{-6}$\,\% we infer (95\% confidence interval).
 This is because the time to evolve from the luminosity bump to the tip of the red giant branch is at least as long as the lifetime of core-helium burning.
 
 
 In scenario (b) giants become lithium-rich at the tip of the red giant branch. At this point 
 the star contracts rapidly, shrinking by a factor of ten in radius in less than $10^4\,{\rm yr}$,
-but taking of order $10^6\,{\rm yr}$ until the star is fully established in the core-helium burning stage. For this reason, lithium depletion timescales of at least $10^6\,{\rm yr}$ are necessary to account for most lithium-rich giants being stable core-helium burning stars. With this timescale (or longer), there is a paucity of lithium-rich stars descending from the tip of the giant branch. In fact, \emph{with any timescale}, scenario (b) cannot explain the $20^{+6}_{-7}$\,\% of lithium-rich giants that we find to be first ascent red giant branch stars, or similar examples known in the literature \citep[e.g.,][]{Kirby_2016}. If scenario (b) is the predominant mechanism for lithium-rich giants, then some additional pathway is required to explain first ascent red giant branch stars.
+but taking of order $10^6\,{\rm yr}$ until the star is fully established in the core-helium burning stage (i.e., a so-called red clump star). For this reason, lithium depletion timescales of at least $10^6\,{\rm yr}$ are necessary to account for most lithium-rich giants being stable core-helium burning stars. With this timescale (or longer), there is a paucity of lithium-rich stars descending from the tip of the giant branch. In fact, \emph{with any timescale}, scenario (b) cannot explain the $20^{+6}_{-7}$\,\% of lithium-rich giants that we find to be first ascent red giant branch stars, or similar examples known in the literature \citep[e.g.,][]{Kirby_2016}. If scenario (b) is the predominant mechanism for lithium-rich giants, then another pathway is required to explain first ascent red giant branch stars that are lithium-rich.
 
-Scenarios (a) and (b) represent the significant stellar evolution events that occur on the red giant branch. However, no timescale in either scenario provides an adequate explanation for the data. For these reasons we considered a third scenario (c) where stars become lithium-rich at a uniformly random time from just before the luminosity bump until the tip of the giant branch, or they become
-lithium-rich when they reach the stable core helium-burning phase. Some technical details merit discussion here. This scenario required us to introduce a relative weighting between the rates of creation of lithium-rich giants at the start of core-helium burning, relative to those created at some point on the red giant branch. If the lithium depletion timescale were short (i.e., much less than $10^6\,{\rm yr}$) then this weighting would exactly reproduce the observed fraction of core-helium burning stars relative to red giant branch stars. However, when the lithium depletion timescale is longer than the time a star takes to evolve from the red giant branch to the red clump, then some red clump giants we observe may have become lithium-rich on the red giant branch and simply remained lithium-rich until we observe them as red clump stars. To account for the random onset time of lithium production  for stars on the giant branch, we made 1,000 Monte Carlo draws from a uniform distribution in time for each observed star, where the lower bound is the time of the luminosity bump and the upper bound is the time of the red giant branch tip. In Figure~\ref{fig:grid_search} we show the goodness-of-fit $\chi_r^2$ from a grid search of trialled weights and depletion timescales for scenario (c). 
+Scenarios (a) and (b) represent the significant stellar evolution events that occur on the red giant branch. However, no timescale in either scenario provides an adequate explanation for the data. This would indicate that there is not a single phase of stellar evolution where significant internal lithium production occurs. For these reasons we considered a third scenario (c) where stars become lithium-rich at a uniformly random time from just before the luminosity bump until the tip of the giant branch, or they become
+lithium-rich when they reach the stable core helium-burning phase. This scenario required us to introduce a relative weighting between the rates of creation of lithium-rich giants at the start of core-helium burning, relative to those created at some point on the red giant branch. If the lithium depletion timescale were short (i.e., much less than $10^6\,{\rm yr}$) then this weighting would exactly reproduce the observed fraction of core-helium burning stars relative to red giant branch stars. However, when the lithium depletion timescale is longer than the time a star takes to evolve from the red giant branch to the red clump, then some red clump giants we observe may have become lithium-rich on the red giant branch and simply remained lithium-rich until we observe them as red clump stars. To account for the random onset time of lithium production  for stars on the giant branch, we made 1,000 Monte Carlo draws from a uniform distribution in time for each observed star, where the lower bound is the time of the luminosity bump and the upper bound is the time of the red giant branch tip. In Figure~\ref{fig:grid_search} we show the goodness-of-fit $\chi_r^2$ from a grid search of trialled weights and depletion timescales for scenario (c). 
 
-If we only consider lithium depletion timescales and weighting fractions that are consistent with our 95\% confidence interval of fraction of core helium burning stars ($f_{\rm CHeB} = 0.80^{+0.07}_{-0.06}$), we find that a lithium depletion timescale of about $2\times 10^{6}\,{\rm yr}$ with a relative formation rate of red giant branch stars to core-helium burning stars of 0.6:1.0 ($w_{rgb}/w_{cheb} = 0.6$) is preferred with $\chi_r^2 = 0.6$, compared to $\chi_r^2$ values between 1.9 and 8.4 for all timescales considered in scenario (a), and 1.5 and 10 for those in scenario (b).
-
-
-%The data are only explicable by scenario (c): giants become lithium-rich during the core helium-burning phase or at a random time on the giant branch, and remain lithium-rich for up to about $2\times10^{6}\,{\rm yr}$ (Figure~\ref{fig:evtracks}).  This indicates that there is not just one phase of stellar evolution where significant internal lithium production occurs. 
-
-
-
-
-
-%We first considered two lithium production 
-%scenarios associated with phases of stellar evolution: (a) at the luminosity bump
-%and (b) at the red giant branch tip. Lithium depletion timescales between 
-%$10^2\,{\rm yr}$ and $10^8\,{\rm yr}$ were considered for each scenario, however
-%none of these timescales could simultaneously match the observed $\log_{10}{g}$ distribution and remain consistent within the 95\% confidence interval of the observed fraction of core-helium burning stars.
-
-
-
-
-
+If we only consider lithium depletion timescales and weighting fractions that are consistent with our 95\% confidence interval of fraction of core helium burning stars ($f_{\rm CHeB} = 0.80^{+0.07}_{-0.06}$), we find that a lithium depletion timescale of about $2\times 10^{6}\,{\rm yr}$ with a relative formation rate of red giant branch stars to core-helium burning stars of 0.6:1.0 ($w_{rgb}/w_{cheb} = 0.6$) is preferred with $\chi_r^2 = 0.6$, and provides reasonable agreement with the data (Figure~\ref{fig:evtracks}c). For comparison, $\chi_r^2$ values between 1.9 and 8.4 were found for all timescales considered in scenario (a), and between $\chi_r^2$ = 1.5 and 10 for those in scenario (b).
+In Section~\ref{sec:discussion} we discuss physical mechanisms that are consistent with scenario (c).
  
 
-% Caption: 97 words.
 \begin{figure*}[t!]
 	\includegraphics[width=\textwidth]{ref_timescales}
 	\caption{{Stars become lithium-rich at the start of core helium-burning, or at a random time on the red giant branch.} The observed distribution in $\logg$ is shown in black (all panels) for 1,374 lithium-rich giants with estimated masses, and error bars indicate the relative standard deviation of the number of stars per bin. The expected distribution for lithium production scenarios is shown in each panel. Scenario (a) and (b) cannot produce enough core-helium burning lithium-rich giants for any depletion timescale. In panel (c) we show the best fitting lithium depletion timescale from a grid search (see Section~\ref{sec:methods}).}
@@ -659,7 +386,6 @@ If we only consider lithium depletion timescales and weighting fractions that ar
 
 
 
-%  Caption: 71 words.
 \begin{figure}
 	\includegraphics[width=0.5\textwidth]{ref_bump_plus_8_scenario_c_grid_search}
 	\caption{The preferred  lithium depletion timescale in scenario (c) is about $10^6$\,yr. Goodness of fit (reduced $\chi^2$) for a grid search of lithium depletion timescales and weighting ratios. Semi-transparent points indicate that the combination of weight and depletion time predicted core-helium burning fractions that are outside our 95\% confidence interval of $80^{+7}_{-6}$\,\%, and therefore inconsistent.  The preferred model ($w_{rgb}/w_{cheb} = 0.6$, $t_{depletion} = 10^{6.3}\,{\rm yr}$ or $2\times10^6\,{\rm yr}$), with $\chi_r^2 = 0.6$, is marked.}
@@ -668,15 +394,13 @@ If we only consider lithium depletion timescales and weighting fractions that ar
 
 
 
-%\subsection{Rates}
-
 \section{Discussion} \label{sec:discussion}
 
 The main astrophysical parameters for the \SampleSize\ lithium-rich giants
 that we discovered are shown in Figure \ref{fig:figure1}.  Our sample size
 is some $100$ times bigger than the largest study to date \citep{Martell_2013}.
-The stellar parameters we derive from spectroscopy suggest that most lithium-rich 
-giants have helium-burning cores, which is confirmed through independent expert
+The stellar parameters we derive from spectroscopy suggest that $80^{+7}_{-6}$\% of lithium-rich 
+giants have helium-burning cores, an analysis that is confirmed through independent expert
 asteroseismic analyses. 
 
 
@@ -767,19 +491,23 @@ lithium-rich giants \citep{Cumming_2008}. Although intermediate mass
 internally and transfer mass to a companion, they are also too rare to explain the number
 of low-mass lithium-rich giant stars \citep{Karakas_2016}.
 Nearby novae have been tentatively proposed as an explanation for lithium-rich giants \citep{Gratton_1989},  however the Galactic nova rate is two orders of magnitude different than the rate we infer for lithium-rich giant 
-stars \citep[$50\,{\rm yr}^{-1}$;][]{Shafter_2017}, and no lithium-rich giants show other abundance signatures that are expected from classical novae \citep{Melo_2005}.
+stars \citep[$50\,{\rm yr}^{-1}$;][]{Shafter_2017}, and no lithium-rich giants are known to show other abundance signatures that would be expected from classical novae \citep{Melo_2005}.
+In summary, the formation rate we find excludes most 
+external mechanisms proposed to explain the origin of lithium-rich giants.
 
 
-
-Our timescale analysis reveals that lithium enrichment is not predominantly 
-associated with either the luminosity bump or the tip of the red giant branch.
+Only a few proposed mechanisms remain, which are predominately associated with
+stages of stellar evolution. However, our timescale analysis reveals that 
+lithium enrichment is not predominately associated with either the luminosity
+bump or the tip of the red giant branch (scenarios a and b), the only two
+significant stellar evolution phases in a red giant star's evolution.
 No lithium depletion timescale in either scenario is able to adequately account
 for the observed distribution in stellar parameters (e.g., $\logg$), or reproduce
-the observed fraction of core-helium burning lithium-rich giant stars. This would
-suggest that lithium enrichment is not a consequence of single star evolution.
+the observed fraction of core-helium burning lithium-rich giant stars.
+This would suggest that lithium enrichment is not a consequence of single star evolution.
 
 
-The data are only consistent with scenario (c), where giant stars can become
+We find that the data are only consistent with scenario (c), where giant stars can become
 lithium-rich at the core-helium burning phase or at a random time on the giant
 branch. While we do find a relative weighting ($w_{rgb}/w_{cheb} = 0.6$) and lithium
 depletion timescale ($2\times10^6\,{\rm yr}^{-1}$) that can reproduce the
@@ -788,46 +516,64 @@ could occur randomly on the giant branch, or at the start of the core-helium
 burning phase.
 
 
+
+
+
 We argue that the mechanisms most consistent with scenario (c) are the 
-tidal spin-up from a binary companion \citep{Fekel_1993}, and the accretion 
-of a planet \citep{Siess_1999}. The accretion of a planet provides a reservoir
+accretion of a planet \citep{Siess_1999}, and the tidal spin-up from a binary companion \citep{Fekel_1993}. The accretion of a planet provides a reservoir
 of unburnt lithium and acts as a mechanism to drive extra mixing that 
 enables internal lithium production. 
+A uniformly random time for lithium enrichment along the 
+giant branch suggests
+an event that occurs at a time that depends on the properties of that system.
 Given a suitable distribution of exoplanet masses and periods, planet engulfment
-could occur at a random time on the giant branch as the star expands in radius.
-However, planet engulfment is most likely to occur at the base of
-the giant branch \citep{Schlaufman}, and planet accretion can 
-only
-explain lithium-rich giants that do not have helium-burning cores. As a star evolves up the giant branch it expands in size until it reaches its maximum stellar radius at 
+is a plausible mechanism that could approximate a uniformly random lithium enrichment time 
+on the giant branch.
+However, planet accretion can only explain lithium-rich giants that do not have helium-burning cores. 
+As a star evolves up the giant branch it expands in size until it reaches its maximum stellar radius at 
 the tip of the giant branch, before contracting in radius over the next 
 about $10^5~{\rm yr}$ as the star becomes a core-helium burning star. 
 Any reasonably close-in planet (within $0.6\,{\rm AU}$ for a $1.3\,M_\odot$ solar-metallicity star) would have been accreted early on the giant branch (Figure~\ref{fig:diagram}).
-%Any lithium depletion timescale of about $10^6~{\rm yr}$ implies that at least some stars become lithium-rich during the core-helium burning phase, not earlier. However, any planets within about $0.6~{\rm AU}$ 
-%(for a $1.3M_\odot$ solar-metallicity star) would have been accreted at an 
-%earlier time on the giant branch . 
 Without 
 introducing significant tidal decay to bring long-period planets close to the host star, planet accretion cannot explain lithium-rich giants with helium-burning cores.
-In summary, planet accretion can only be responsible for up to about 20\% of lithium-rich giant stars. 
+In summary, planet accretion can only be responsible for up to about 20\% of lithium-rich giant stars.
 
 
-Tidal interactions between binary stars can provide a consistent explanation for all
-lithium-rich giant stars. This mechanism is reliant on the internal production of lithium 
-through the Cameron-Fowler mechanism \citep{Cameron_1971}, which is mixed to the surface of the giant star. In single star evolution, no net lithium is created without the introduction of extra
-mixing.  Thermohaline mixing, driven by the higher abundance of helium-3 outside the main hydrogen burning shell, can drive sufficient extra mixing after the luminosity bump to replenish some of the lithium lost during first dredge up, but is insufficient to enhance lithium above the initial lithium abundance \citep{Lattanzio_2014}. This helium-3 captures an $\alpha$-particle  to produce 
+\begin{figure*}
+	\includegraphics[width=\textwidth]{diagram}
+	\caption{
+		A schematic illustrating the mechanisms that can produce lithium-rich giants at the clump and at a random time on the giant branch. 
+		Only tidal locking can produce lithium-rich giants in the core-helium burning phase. Tidal interactions can spin-up the primary when it is on the giant branch (spin is indicated by rotation arrows). Planetary accretion can also cause lithium enrichment (shown in blue) on the giant branch, where the time will depend on the planet's orbital radius. Schematic is not to scale in length or time.}
+	\label{fig:diagram}
+\end{figure*}
+
+
+The primary mechanism we propose for scenario (c) is tidal interactions between binary stars,
+which can provide a consistent explanation for all
+lithium-rich giant stars, including those with and without helium burning cores. 
+Specifically, here we argue that internal lithium production at the start of the core-helium burning phase 
+is an expected consequence of tidal locking in a binary system,
+and tidal interactions could spin-up a red giant branch star at a near uniformly random time, depending on the properties of the binary system (Figure~\ref{fig:diagram}).
+This mechanism is reliant on the internal production of lithium 
+through the Cameron-Fowler mechanism \citep{Cameron_1971}, 
+which is mixed to the surface of the giant star. In single star evolution, no net lithium is created without the introduction of extra
+mixing.  Thermohaline mixing, driven by the higher abundance of helium-3 outside the main hydrogen burning shell, can drive sufficient extra mixing after the luminosity bump to replenish some of the lithium lost during first dredge up. This helium-3 captures an $\alpha$-particle to produce 
 beryllium-7, which captures an electron to produce lithium-7. Without rapid mixing to move 
 freshly  produced lithium-7 to a cooler region, lithium-7 easily captures a proton to 
 form unstable beryllium-8, which then undergoes fission to helium-4. With rapid mixing 
 the overall lithium abundance can increase inside a star: beryllium-7 is moved to a 
 cooler region where electron-capture to lithium-7 can occur, but proton capture on 
-lithium-7 does not occur. 
+lithium-7 does not occur. However, thermohaline mixing is insufficient to enhance lithium above the initial lithium abundance \citep{Lattanzio_2014}.
+We can surmise that at least two conditions are required for lithium production inside red giants: there must be helium-3 available for the $^3{\rm He}(\alpha,\gamma)^7{\rm Be}$ reaction to occur, and the level of mixing inside a giant must be sufficient for beryllium-7 to be transported to cooler regions so that the $^7{\rm Be}(\beta^{-},\nu)^7{\rm Li}$ reaction can take place. 
 
-We can surmise that at least two critical conditions are required for lithium production inside red giants: there must be helium-3 available for the $^3{\rm He}(\alpha,\gamma)^7{\rm Be}$ reaction to occur, and the level of mixing inside a giant must be sufficient for beryllium-7 to be transported to cooler regions so that the $^7{\rm Be}(\beta^{-},\nu)^7{\rm Li}$ reaction can take place. We propose that differential rotation, enhanced by a binary companion, can induce sufficiently fast mixing to drive significant internal lithium production \citep{Costa_2002}. This effect is greatest when a star contracts to a core-helium burning star, when the radius of the star decreases by about a factor of ten or twenty \citep{Despain_1981}. We assume the contraction is homologous such that the moment of inertia  $I \propto MR^2$ and if we assume that the total angular momentum $J = I\Omega$ is conserved then $J \propto \Omega{}R^2$. Thus the spin $\Omega$ increases by a factor of 100 to 400 when core-helium burning begins. Rotation in centrally condensed stars \citep{Eddington_1929} generally causes perturbations of order $\Omega^2$ so that any rotationally driven mixing can be expected to increase with spin proportional to $\Omega^2$. 
-% helium is ignited in order to conserve momentum. Mixing due to rotation can be approximated as a diffusion process with a diffusion coefficient $D_{\rm mix}$ given by \citep{Charbonnel_1995},
+We propose that differential rotation, enhanced by a binary companion, can induce sufficiently fast mixing to drive significant internal lithium production \citep{Costa_2002}. 
+Let us first consider the case of a single star, without a binary companion.
+Differential rotation is greatest when a star contracts to a core-helium burning star and the radius decreases by about a factor of ten or twenty \citep{Despain_1981}. We assume the contraction is homologous such that the moment of inertia  $I \propto MR^2$ and if we assume that the total angular momentum $J = I\Omega$ is conserved then $J \propto \Omega{}R^2$. Thus the spin $\Omega$ increases by a factor of 100 to 400 when core-helium burning begins. Rotation in centrally condensed stars \citep{Eddington_1929} generally causes perturbations of order $\Omega^2$ so that any rotationally driven mixing can be expected to increase with spin proportional to $\Omega^2$. 
 Mixing due to rotation can be approximated as a diffusion process with a diffusion coefficient
 \begin{equation}
 D_{\rm mix} \approx \frac{L_{r}r^2}{\mathcal{M}_{r}g^{2}}\frac{\nabla_{ad}}{\nabla_{ad} - \nabla_{rad}}\Omega^2{f_i}
 \end{equation}
-\noindent{}which rises expectedly with $\Omega^2$, and it can be shown that $D_{\rm mix} > 10^{11}\,{\rm cm}^2\,{\rm s}^{-1}$ is necessary to enhance lithium significantly above its initial abundance \citep{Denissenkov_2004}. However, diffusion coefficients of $10^8\,{\rm cm}^2\,{\rm s}^{-1}$ to $10^9\,{\rm cm}^2\,{\rm s}^{-1}$ are found for normal red giant stars or core-helium burning stars of similar radii \citep{Denissenkov_2004,Palacios_2006}, two to three orders of magnitude below the the $D_{\rm mix} \approx 10^{11}\,{\rm cm}^2\,{\rm s}^{-1}$ level required for lithium production. 
+\noindent{}which rises expectedly with $\Omega^2$, and it can be shown that $D_{\rm mix} > 10^{11}\,{\rm cm}^2\,{\rm s}^{-1}$ is necessary to enhance lithium significantly above its initial abundance \citep{Denissenkov_2004}. However, diffusion coefficients of $10^8\,{\rm cm}^2\,{\rm s}^{-1}$ to $10^9\,{\rm cm}^2\,{\rm s}^{-1}$ are found for normal red giant stars or core-helium burning stars of similar radii \citep{Denissenkov_2004,Palacios_2006}, 2 to 3 orders of magnitude below the the ${D_{\rm mix} \approx 10^{11}\,{\rm cm}^2\,{\rm s}^{-1}}$ level required for lithium production. 
 In other words, conservation of angular momentum ensures that the rotation of a typical single core-helium burning star is insufficient to enhance lithium. 
 
 
@@ -865,13 +611,12 @@ in such a system increases its spin as usual, so that it is rotating  ten times 
 velocity of $18\,{\rm km\,s}^{-1}$, which is still fast compared to most giants. For a representative case of a $1.5\,M_\odot$ primary giant and a $1\,M_\odot$
 companion, $18\,{\rm km\,s}^{-1}$ and $182\,\rm{km\,s}^{-1}$ represent the
 lower and upper bounds of equatorial velocities expected from the tidal spin up of
-a companion. This range of tidal spin-up would increase $D_{\rm mix}$ by up to a factor of about 6,500 ($D_{\rm mix} \approx 10^{12}$ to $10^{13}\,{\rm cm}^{2}{\rm s}^{-1}$), more than the requisite value to drive internal lithium production ($D_{\rm mix} > 10^{11}\,{\rm cm}^{2}{\rm s}^{-1}$).
+a companion. This range of tidal spin-up would increase $D_{\rm mix}$ by up to a factor of about 6,500 ($D_{\rm mix} \approx 10^{12}$ to $10^{13}\,{\rm cm}^{2}{\rm s}^{-1}$), orders of magnitude above the requisite value to drive internal lithium production ($D_{\rm mix} \approx 10^{11}\,{\rm cm}^{2}{\rm s}^{-1}$). 
 
 
 
-%If \todo{we assume that the initial periods of binary systems are distributed uniformly in
-%$\log{P}$} and span about eight decades from $3.6\,{\rm days}$ to $10^6\,{\rm years}$ then about 1 in 8
-%giants in a binary system are affected by tidal spin up. 
+This calculation demonstrates that tidal interactions between binary stars can drive 
+lithium production in low mass red giant branch stars.
 If we adopt a normal distribution in $\log{[P\,{\rm (days)}]}$ with a peak at $\log{P} = 5.03$ and $\sigma_{\log{P}} = 2.28$ \citep[as inferred from observations;][]{Raghavan_2010}, then up to 1 in 3 giants in a binary system could be affected by tidal spin up.
 The effect of metallicity
 is to change the maximum radius of the giant (to $71/87/155/175\,R_\odot$ for $Z = 0.0001/0.001/0.02/0.03$, respectively) 
@@ -881,14 +626,7 @@ range. The range of periods over which stars become tidally synchronised on the 
 branch varies accordingly as $P \propto R^{3/2}$ and the spin up is weaker by $R^2$, so the
 final spin of a tidally synchronised core-helium burning star scales as $R^{-1/2}$.
 
-%An increasing maximum radius with increasing stellar metallicity is consistent with
-%metal-rich giant stars being more affected by tidal spin-up than their metal-poor
-%counterparts, which could explain the increasing occurrence rate of lithium-rich giants
-%we observe with increasing metallicity.
 
-
-
-%We have shown that a tidally locked giant in binary system is significantly spun up relative to a single giant. 
 
 
 
@@ -919,7 +657,7 @@ For spun-up  giants we take $v\sin{i} \approx 18\,{\rm km\,s}^{-1}$ for stars in
 Given these assumptions the fraction of lithium-rich giants that we expect to have rotation above $120\,{\rm km\,s}^{-1}$  among the entire population (whether they were observed or not), is $f_{>150} = 1 - (150 - 5)/(182 - 5) = 0.18$. 
 
 
-The fraction of lithium-rich giants that we expect to have rotation exceeding $150\,{\rm km\,s}^{-1}$ is given by $f_{{\rm observe}\,>150} = \frac{t_{\rm spindown}}{t_{\rm depletion}} f_{\rm CHeB} f_{>150}$. Our analysis indicates that about 80\% of lithium-rich giants are core-helium burning giants ($f_{\rm CHeB} = 0.80$). Given our assumptions we conclude that about 1.5\% of lithium-rich giants with helium-burning cores should have surface rotation exceeding $150\,{\rm km\,s}^{-1}$. This is in good agreement with the 1.2\% (3/256) we observe from the na\"ive combination of \lamost, \rave, and \apogee\ data. If we only consider lithium-rich giants with $v\sin{i}$ measurements from \rave\ or \apogee\ then we can repeat this calculation for lower detectable rotational velocities. Taking $f_{>20} = 1 - (20 - 5)/(182 - 5) = 0.92$, we find 7.4\% of lithium-rich giants are expected to have surface rotation exceeding $20\,{\rm km\,s}^{-1}$. This is in reasonable agreement with the 10.6\% (16/153) of lithium-rich giants observed to have rotation exceeding $20\,{\rm km\,s}^{-1}$ in the \rave\ and \apogee\ cross-matches. Given our assumptions,  our na\"ive treatment of the combination of multiple catalogues, and our ignorance on the inclination angle, we conclude that the level of projected surface rotation among lithium-rich giant stars is consistent with tidal spin-up by a binary companion.
+The fraction of lithium-rich giants that we expect to have rotation exceeding $150\,{\rm km\,s}^{-1}$ is given by $f_{{\rm observe}\,>150} = \frac{t_{\rm spindown}}{t_{\rm depletion}} f_{\rm CHeB} f_{>150}$. Our analysis indicates that about 80\% of lithium-rich giants are core-helium burning giants ($f_{\rm CHeB} = 0.80$). Given our assumptions we conclude that about 1.5\% of lithium-rich giants with helium-burning cores should have surface rotation exceeding $150\,{\rm km\,s}^{-1}$. This is in good agreement with the 1.2\% (3/256) we observe from the na\"ive combination of \lamost, \rave, and \apogee\ data. If we only consider lithium-rich giants with $v\sin{i}$ measurements from \rave\ or \apogee\ then we can repeat this calculation for lower detectable rotational velocities. Taking $f_{>20} = 1 - (20 - 5)/(182 - 5) = 0.92$, we find 7.4\% of lithium-rich giants are expected to have surface rotation exceeding $20\,{\rm km\,s}^{-1}$. This, too, is in reasonable agreement with the 10.6\% (16/153) of lithium-rich giants observed to have rotation exceeding $20\,{\rm km\,s}^{-1}$ in the \rave\ and \apogee\ cross-matches. Given our assumptions,  our na\"ive treatment of the combination of multiple catalogues, and our ignorance on the inclination angle, we conclude that the level of projected surface rotation among lithium-rich giant stars is consistent with tidal spin-up by a binary companion.
 
 
 We have argued that lithium production driven by tidal interactions is consistent
@@ -927,27 +665,48 @@ with the observations, but what evidence is there for binarity among lithium-ric
 giants? Lithium-rich giants are not usually subject to repeat spectroscopic observations,
 as a single high-quality spectrum is typically sufficient to derive detailed chemical
 abundances and isotopic ratios, and most literature discussion to date has focussed 
-on alternative hypotheses for lithium enrichment. For these reason, nearly all 
-lithium-rich giants have not been observed for radial velocity variations that would indicate binarity. This is largely the case for our sample: most sources have a single
+on alternative hypotheses for lithium enrichment. For these reason, almost no 
+lithium-rich giants have been repeatedly observed for radial velocity variations that would indicate binarity. This is largely the case for our sample: most sources have a single
 epoch in \lamost\ and \rave, or just a few in \apogee. 
-However, 8 lithium-rich giants have been serendipitiously discovered by an
-exoplanet host star survey \citep{Adamow_2015}. Of those, 5/8 showed radial velocity
-variations from just a few observation epochs, a curiously high fraction given the long orbital periods
+However, 8 lithium-rich giants were serendipitously discovered by an
+exoplanet host star survey \citep{Adamow_2015}, where multiple epochs of radial velocity measurements are available. Of those lithium-rich giants, 5/8 showed radial velocity
+variations from just a few epochs: a curiously high fraction given the long orbital periods
 where tides could drive lithium production.
 A precise radial velocity study of a large number of lithium-rich giants 
 is well-motivated, but the long orbital periods make such an endeavour expensive.
 
+While tidal interactions between binary stars would provide a consistent explanation
+for the data, some alternative explanations merit discussion. If planet accretion is
+responsible for the 20\% of lithium-rich giants that are on their first ascent on the
+giant branch, then the remaining 80\% could be explained by some mechanism associated
+with the core helium flash that occurs at the tip of the red giant branch. The core
+helium flash is a turbulent event, and extremely challenging to model accurately in
+stellar evolution. Velocity fluctuations are necessarily suppressed, which limits
+the inferences one can make on internal mixing and subsequent lithium production.
+Let us consider that the data are explainable by scenario (c) where the 
+physical mechanisms are planet engulfment and internal lithium production arising
+from the core helium flash. If so, why do some stars become lithium-rich during
+core helium flash, and some do not? Do tidal interactions have no impact on lithium
+production, even though mixing is a key ingredient?
+The answer to these questions is, quite obviously, that we do not
+know because we cannot accurately model the helium flash. Even without a detailed
+understanding of the core helium flash, we know that if the core helium flash were
+to drive lithium production then a reservoir of helium-3 is necessary just outside the main hydrogen burning shell. However without differential rotation along the giant branch, most helium-3 will be depleted by thermohaline mixing by the time the star reaches the tip of the giant branch.
+Presumably the helium-3 reservoir would be provided during the nucleosynthesis and mixing 
+that results from the core helium flash. 
 
-
-
-% Caption: 90 words
-\begin{figure*}
-	\includegraphics[width=\textwidth]{diagram}
-	\caption{
-		A schematic illustrating the mechanisms that can produce lithium-rich giants at the clump and at a random time on the giant branch. 
-		Only tidal locking can produce lithium-rich giants in the core-helium burning phase. Tidal interactions can spin-up the primary when it is on the giant branch (spin is indicated by rotation arrows). Planetary accretion can also cause lithium enrichment (shown in blue) on the giant branch, where the time will depend on the planet's orbital radius. Schematic is not to scale in length or time.}
-	\label{fig:diagram}
-\end{figure*}
+Although it may be challenging to unambiguously show that the core helium flash is
+responsible for internal lithium production, our hypothesis does provide a number of
+falsifiable predictions. 
+If planet accretion is responsible for enhanced lithium in red giants without 
+helium-burning cores, then an increase in beryllium is also expected \citep{Siess_1999,
+Melo_2005}, whereas if tidal interactions are responsible then we would expect the 
+long-lasting extra mixing from the spin-up of a binary companion to fully deplete
+the beryllium in a star \citep{Sackmann_1999}.
+Similarly, for planet accretion to explain core helium-burning lithium-rich giants,
+planet engulfment would have to occur when the star is at the tip of the red giant
+branch, and the star has since evolved into the stable core-helium burning phase and
+lithium will deplete within the next $\approx10^{6}\,{\rm yr}$. Whereas if tidal interactions -- and more specifically, tidal locking -- is the mechanism for lithium enrichment among core-helium burning stars, then we predict most core-helium burning lithium rich giants to have a binary companion.
 
 
 \section{Conclusions} \label{sec:conclusions}
@@ -973,28 +732,31 @@ stellar mergers, the engulfment of a brown dwarf, mass transfer from an asymptot
 giant branch companion, and classical novae.
 
 
-We argue that a combination of tidal interactions, and perhaps planetary engulfment, 
+We argue that a combination of tidal interactions, and possibly planetary engulfment, 
 are the most plausible mechanisms that are consistent with the data. However,
 because a giant star increases in radius as it ascends the giant branch, 
 planetary engulfment can only explain up to about 20\% of lithium-rich giants 
 (e.g., those without helium-burning cores), as any core helium-burning lithium-rich
-giant stars will have radii some 10-20 times lower, and therefore be unable to ingest giant planets without introducing significant tidal decay to bring long period planets close in.
+giant stars will have radii some 10-20 times lower than its radius on the giant branch, and therefore be unable to ingest giant planets without introducing significant tidal decay to bring long period planets close in.
 We conclude that tidal interactions seem to be the most dominant and plausible
 remaining explanation for lithium-rich giant stars.
 
 
-Indeed, we have shown that tidal interactions in binary systems can be strong enough
+We have shown that tidal interactions in binary systems can be strong enough
 to drive internal mixing high enough such that lithium can be produced through the 
 Cameron-Fowler mechanism. This effect is largest in a binary system where a giant star 
 contracts in radius at the start of the core helium burning phase, consistent with
 our scenario.
-Those same angular momentum constraints also show that the
-requisite level of mixing cannot be achieved by a single star in isolation. Although
+Those same conservation of angular momentum constraints demonstrate that the
+requisite level of mixing cannot be achieved by a single star without a binary
+companion. Although
 there are observational biases, the expected projected rotational velocities 
 resulting from tidal interactions are consistent with observations.
 
 A prediction of our hypothesis is that nearly every lithium-rich giant star
-with a helium-burning core has a binary companion. Similarly, unless 
+with a helium-burning core has a binary companion, as most of these objects cannot be
+explained by planet accretion. 
+Similarly, unless 
 the frequency of lithium-rich giants can be explained by an increased planet 
 occurrence rate at higher metallicities,
 then our hypothesis implies either an increasing binary fraction with increasing stellar 
@@ -1005,95 +767,8 @@ individual systems through high-resolution spectroscopic observations
 to precisely measure beryllium and radial velocity variations. Planetary 
 engulfment is expected to increase both beryllium and lithium \citep{Siess_1999,
 Melo_2005}, whereas long-lasting extra mixing from the spin-up of a binary 
-companion is expected to fully deplete the beryllium inside a star \citep{Sackmann_1999}. 
+companion is expected to fully deplete the beryllium inside a star \citep{Sackmann_1999}.\\
 
-
-
-
-
-%Angular momentum transfer from a binary companion may explain all lithium-rich giant stars.
-%Consider a representative binary system comprising a $1.5\,M_\odot$ primary and a $1\,M_\odot$ companion. For initial orbital periods up to $7.64\,{\rm yr}$
-%the primary is tidally spun up when it is on the red giant branch such that the spin period of the primary is synchronised to the orbital period. This is in contrast to a single star, which spins down  as it expands in radius while evolving on the giant branch. When the primary star evolves from the tip of the giant branch and the core starts burning helium, the star contracts in radius. Conservation of angular momentum demands that it spins much faster than the comparable single star. For a core-helium burning star in a binary system, this leads to a surface rotational velocity of $18\,{\rm km\,s}^{-1}$. For the same representative binary system, the shortest orbital period that avoids merging on the giant branch is 280\,days. In this situation tidal interactions can spin up the core-helium burning star enough to have surface rotation of $180\,{\rm km\,s}^{-1}$. The rotational spin up in either extreme can drive extra mixing and internal lithium production (see Methods), consistent with observations that many lithium-rich giants are rapid rotators \citep{de_la_Reza_1997}.
-
-
-
-
-%Therefore due to conservation of momentum, $D_{\rm mix}$ will increase by $10^4-10^5$ when the stellar radius decreases by a factor of $10-20$. The typical value of $D_{\rm mix}$ arising from standard rotation in a red giant star is at the level of $10^8\,{\rm cm}^2\,{\rm s}^{-1}$ to $10^9\,{\rm cm}^2\,{\rm s}^{-1}$, orders of magnitude below the $D_{\rm mix} > 10^{11}\,{\rm cm}^2\,{\rm s}^{-1}$ level which theoretical simulations suggest is required for net lithium production \citep{Denissenkov_2004}. However, after helium is ignited we can expect $D_{\rm mix}$ to increase to about $10^{12}\,{\rm cm}^2\,{\rm s}^{-1}$ to $10^{13}\,{\rm cm}^2\,{\rm s}^{-1}$, well above the $10^{11}\,{\rm cm}^2\,{\rm s}^{-1}$ value necessary to enable net lithium production. 
-
-
-%These calculations do not require a binary companion, and thus the mixing criteria of $D_{\rm mix} > 10^{11}\,{\rm cm}^2\,{\rm s}^{-1}$ (condition 2) is easily met for single stars that start burning helium in their cores. However, single stars at the tip of the giant branch do not meet the helium-3 requirement for lithium production (condition 1) because all internal helium-3 will be destroyed by the time the star reaches the tip of the red giant branch. When the giant star reaches the tip of the giant branch there is only a negligible quantity of helium-3 remaining. This is a consequence of \emph{any} mixing mechanism that can also reproduce the observed abundances in red giant stars (e.g., thermohaline mixing; carbon-12, carbon-13, lithium-7, and helium-3 abundances). For these reasons, internal lithium production during the core-helium burning phase also requires helium-3 to be preserved when the primary is a red giant. The increased Coriolis force associated with solid body rotation can prevent the destruction of helium-3 (and lithium-7), but there must be a mechanism (e.g., tidal locking in binary systems) to drive solid body rotation \citep{Costa_2002}. Strong differential rotation in a single star is insufficient.
-
-%We find that only a giant star in a binary system can meet constraints (1) and (2) for internal lithium production. Moreover, only a giant star in a tidally-locked system can explain the lithium-rich giant stars we observe with helium-burning cores. The solid body rotation that arises from tidal locking is required to preserve helium-3 until the giant reaches the tip of the giant branch (condition 1), and the mixing condition (condition 2; $D_{\rm mix} > 10^{11}\,{\rm cm}^2\,{\rm s}^{-1}$) is inevitably met once helium is ignited in the core and the radius decreases. To meet both conditions in red giant stars -- that have not accreted a planet -- the tidal interactions must be sufficient to preserve helium-3 and drive $D_{\rm mix} > 10^{11}\,{\rm cm}^2\,{\rm s}^{-1}$.
-
-
-
-
-
-% 15 + 8 = 23 have evolutionary classifications from high-quality kepler light curves.
-% --> of those, at least 21 are core-helium burning stars (the classification of one star is disputed)
-% --> 21/23
-
-% Another 2 have useful light curves obtained by K2, both of which are upper red giant branch stars without helium-burning cores.
-
-% --> 25 stars in total, of which 21 are core-helium burning stars.
-
-
-
-
-%(b) at a uniformly random time on the giant branch, 
-
-%Lithium production at the luminosity bump can only produce 40\% f lithium-rich giants (see Methods). 
-
-
-
-
-%at the start of the core helium-burning stage or at a uniformly random time on the giant branch, and (c) at the luminosity bump \citep{Charbonnel_2000}. 
-
-%We find that scenarios (a) and (b) cannot be reconciled with the 
-%observations (Figure~\ref{fig:evtracks}). 
-
-
-%If lithium is produced at the tip of the giant branch (scenario b) then depletion timescales of at least $10^6\,{\rm yr}$ are necessary for lithium to survive until 
-%production to occur at the tip of the red giant branch and remain lithium-rich
-%until the core-helium burning stage. 
-%This scenario cannot account for 
-
-%HERE
-
-
-
-
-
-%The increasing occurrence rate
-%of lithium-rich giants at higher metallicities also indicates that not every
-%star experiences lithium-enrichment \citep{de_la_Reza_1997,Kirby_2016}. For example,
-%if every star experienced lithium enrichment then we would expect lithium-rich giants to show the same metallicity distribution as lithium-normal giants, which we do not observe.
-
-
-
-
-% This can result in surface
-%rotational velocities exceeding $18\,{\rm km\,s}^{-1}$, 
-%perhaps sufficient to induce extra mixing and facilitate internal lithium production.
-%We find that if the two stars become tidally synchronised, such that the stellar spin period is 
-%equal to the orbital period, then this synchronisation can also account for lithium-rich
-%giants with helium-burning cores. Solid body rotation arising from tidal synchronisation can inhibit 
-%the destruction of helium-3, a necessary ingredient for lithium production \citep{Costa_2002}. When the %primary star evolves from the tip  of the giant
-%branch and the core starts burning helium, the star contracts in radius and conservation of angular 
-%momentum demands that it spins faster.
-%For our representative $1.5\,M_\odot$ and $1\,M_\odot$ binary system, a
-%tidally locked configuration can produce surface rotational velocities of up to
-%$182\,{\rm km\,s}^{-1}$ when the primary reaches the core helium-burning phase.
-%Magnetic braking will slow this rotation over the next $10^{5}\,{\rm years}$ or so \citep{Hartmann_1986}.
-
-
-
-
-
-
-%% If you wish to include an acknowledgments section in your paper,
-%% separate it off from the body of the text using the \acknowledgments
-%% command.
 \acknowledgments
 
 A.~R.~C. is supported through an Australian Research Council Discovery Project under grant DP160100637. 
@@ -1112,49 +787,24 @@ Guoshoujing Telescope (the Large Sky Area Multi-Object Fiber Spectroscopic Teles
 
 
 
-%% To help institutions obtain information on the effectiveness of their 
-%% telescopes the AAS Journals has created a group of keywords for telescope 
-%% facilities.
-%
-%% Following the acknowledgments section, use the following syntax and the
-%% \facility{} or \facilities{} macros to list the keywords of facilities used 
-%% in the research for the paper.  Each keyword is check against the master 
-%% list during copy editing.  Individual instruments can be provided in 
-%% parentheses, after the keyword, but they are not verified.
+\vspace{5mm}
+\facilities{LAMOST, Kepler, Gaia}
 
-%\vspace{5mm}
-%\facilities{HST(STIS), Swift(XRT and UVOT), AAVSO, CTIO:1.3m, CTIO:1.5m,CXO}
-
-%% Similar to \facility{}, there is the optional \software command to allow 
-%% authors a place to specify which programs were used during the creation of 
-%% the manusscript. Authors should list each code and include either a
-%% citation or url to the code inside ()s when available.
-
-\software{}
-
-%% Appendix material should be preceded with a single \appendix command.
-%% There should be a \section command for each appendix. Mark appendix
-%% subsections with the same markup you use in the main body of the paper.
-
-%% Each Appendix (indicated with \section) will be lettered A, B, C, etc.
-%% The equation counter will reset when it encounters the \appendix
-%% command and will number appendix equations (A1), (A2), etc. The
-%% Figure and Table counter will not reset.
-
-
+\software{
+     \project{AstroPy}\ \citep{Astropy_2013,Astropy_2018},
+     \project{numpy}\ \citep{Van-Der-Walt_2011},
+     \project{scipy}\ \citep{Jones_2001},
+     \project{matplotlib}\ \citep{Hunter_2007},
+     \project{The Cannon}\ \citep{Ness_2015,Casey_2016b,Ho_2017a,Ho_2017b}
+}    
+     
 \bibliographystyle{aasjournal}
 \bibliography{eneloop}
 
 
-%% This command is needed to show the entire author+affilation list when
-%% the collaboration and author truncation commands are used.  It has to
-%% go at the end of the manuscript.
-%\allauthors
 
 %% Include this line if you are using the \added, \replaced, \deleted
 %% commands to see a summary list of all changes at the end of the article.
 %\listofchanges
 
 \end{document}
-
-% End of file `sample62.tex'.
