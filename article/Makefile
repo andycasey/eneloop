@@ -1,28 +1,28 @@
 .PHONY : clean, default, publish
 
-REPO_NAME   = ${TRAVIS_REPO_SLUG#*/}
-TEX_FILES   = ${REPO_NAME}
+REPO_NAME   = $(echo $TRAVIS_REPO_SLUG | cut -f2 -d/) 
+TEX_FILES   = eneloop
 TMP_SUFFS   = pdf aux bbl blg log dvi ps eps out ent
 LATEX       = pdflatex -interaction=nonstopmode -halt-on-error
 SUFF        = pdf
-RM_TMP      = $(foreach d, ${TEX_FILES}, rm -rf $(foreach suff, ${TMP_SUFFS}, ${d}.${suff})) ${REPO_NAME}Notes.bib
-CHECK_RERUN = grep Rerun ${REPO_NAME}.log
+RM_TMP      = $(foreach d, ${TEX_FILES}, rm -rf $(foreach suff, ${TMP_SUFFS}, ${d}.${suff})) eneloopNotes.bib
+CHECK_RERUN = grep Rerun eneloop.log
 FIGURES     = $(patsubst %.py,%.pdf,$(wildcard figures/*.py))
 TECTONIC    = $(shell command -v tectonic >/dev/null && echo true || echo false )
 
-default: ${REPO_NAME}.pdf
+default: eneloop.pdf
 
-${REPO_NAME}.pdf: ${REPO_NAME}.tex bib.bib $(FIGURES)
+eneloop.pdf: eneloop.tex eneloop.bib $(FIGURES)
 	# Generate links to current git commit
 	#python gen_links.py
 	# Compile the paper with either tectonic or pdflatex
 	if [ "${TECTONIC}" = "true" ]; then\
-		tectonic ${REPO_NAME}.tex --print --keep-logs;\
+		tectonic eneloop.tex --print --keep-logs;\
 	else\
-		${LATEX} ${REPO_NAME}.tex;\
-		( ${CHECK_RERUN} && ${LATEX} ${REPO_NAME}.tex ) || echo "Done.";\
-		( ${CHECK_RERUN} && ${LATEX} ${REPO_NAME}.tex ) || echo "Done.";\
-		( ${CHECK_RERUN} && ${LATEX} ${REPO_NAME}.tex ) || echo "Done.";\
+		${LATEX} eneloop.tex;\
+		( ${CHECK_RERUN} && ${LATEX} eneloop.tex ) || echo "Done.";\
+		( ${CHECK_RERUN} && ${LATEX} eneloop.tex ) || echo "Done.";\
+		( ${CHECK_RERUN} && ${LATEX} eneloop.tex ) || echo "Done.";\
 	fi
 
 clean:
