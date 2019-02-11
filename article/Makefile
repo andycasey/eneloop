@@ -20,7 +20,7 @@ eneloop.pdf: eneloop.tex eneloop.bib $(FIGURES)
 		tectonic eneloop.tex --print --keep-logs;\
 	else\
 		${LATEX} eneloop.tex;\
-		( ${CHECK_RERUN} && ${LATEX} eneloop.tex ) || echo "Done.";\
+		( ${CHECK_RERUN} && bibtex eneloop.tex ) || echo "Done.";\
 		( ${CHECK_RERUN} && ${LATEX} eneloop.tex ) || echo "Done.";\
 		( ${CHECK_RERUN} && ${LATEX} eneloop.tex ) || echo "Done.";\
 	fi

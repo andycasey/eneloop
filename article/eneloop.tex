@@ -34,13 +34,13 @@
 \accepted{January X, 2025}
 \submitjournal{AAS Journals}
 
-\shorttitle{Tidal interactions between binary stars can drive lithium production in low-mass red giants}
+\shorttitle{Tidal interactions between binary stars drives lithium production in low-mass red giants}
 \shortauthors{Casey et al.}
 
 
 \begin{document}
 
-\title{Tidal interactions between binary stars can drive lithium production in low-mass red giants}
+\title{Tidal interactions between binary stars drives lithium production in low-mass red giants}
 
 \correspondingauthor{Andrew R. Casey}
 \email{andrew.casey@monash.edu}
@@ -60,17 +60,6 @@
 \author{Melissa~Ness}
 \affil{Department of Astronomy, Columbia University, 550 W 120th St, 
 	   New York, NY 10027, USA}
-\affil{Max-Planck-Institut f\"ur Astronomie, K\"onigstuhl 17, D-69117 
-       Heidelberg, Germany}
-
-
-\author[0000-0003-2866-9403]{David~W.~Hogg}
-\affil{Center for Cosmology and Particle Physics, Department of Physics, 
-       New York University, 726 Broadway, New York, NY 10003, USA}
-\affil{Center for Computational Astrophysics, 
-       Flatiron Institute, 162 Fifth Ave, New York, NY 10010, USA}
-\affil{Center for Data Science, New York University, 60 Fifth Ave, New York,
-       NY 10011, USA}
 \affil{Max-Planck-Institut f\"ur Astronomie, K\"onigstuhl 17, D-69117 
        Heidelberg, Germany}
        
@@ -139,7 +128,9 @@ that most lithium-rich giants have helium-burning cores ($80^{+7}_{-6}\%$), and 
 of lithium-rich giants rises with increasing stellar metallicity. We find that 
 while planet accretion may explain some lithium-rich giants, it 
 cannot account for the majority that have helium-burning cores. We rule out most other 
-proposed explanations for the origin of lithium-rich giants. Our analysis shows that
+proposed explanations as the primary mechanism for lithium-rich giants, including all
+stages related to single star evolution.
+Our analysis shows that
 giants remain lithium-rich for only about two million years. A prediction from
 this lithium depletion timescale is that most lithium-rich giants with a helium-burning
 core have a binary companion.
@@ -149,7 +140,7 @@ core have a binary companion.
 	  --- stars: low-mass 
 	  --- (stars:) binaries: general}
 
-\vspace{0.5em}
+\vspace{2.5em}
 \section{Introduction} \label{sec:intro}
 Stellar evolution theory suggests that material from inner layers,
 where the element composition has been altered by nuclear reactions, is
@@ -180,7 +171,7 @@ lithium-rich giants has until now prohibited any empirical constraints on why, w
 and when lithium production occurs, and for how long stars remain lithium-rich.
 
 
-\section{Methods} \label{sec:methods}
+\section{Methods and Results} \label{sec:methods}
 
 \subsection{Spectroscopy}
 
@@ -326,7 +317,7 @@ $f_{\rm CHeB} = 0.80^{+0.07}_{-0.06}$ for the remainder of this work.
 \end{figure*}
 
 
-
+\vspace{2em}
 \subsection{Timescales}
 
 The relative timescales of different stages of stellar evolution are known with
@@ -382,7 +373,7 @@ but taking of order $10^6\,{\rm yr}$ until the star is fully established in the 
 Scenarios (a) and (b) represent the significant stellar evolution events that occur on the red giant branch. However, no timescale in either scenario provides an adequate explanation for the data. This would indicate that there is not a single phase of stellar evolution where significant internal lithium production occurs. For these reasons we considered a third scenario (c) where stars become lithium-rich at a uniformly random time from just before the luminosity bump until the tip of the giant branch, or they become
 lithium-rich when they reach the stable core helium-burning phase. This scenario required us to introduce a relative weighting between the rates of creation of lithium-rich giants at the start of core-helium burning, relative to those created at some point on the red giant branch. If the lithium depletion timescale were short (i.e., much less than $10^6\,{\rm yr}$) then this weighting would exactly reproduce the observed fraction of core-helium burning stars relative to red giant branch stars. However, when the lithium depletion timescale is longer than the time a star takes to evolve from the red giant branch to the red clump, then some red clump giants we observe may have become lithium-rich on the red giant branch and simply remained lithium-rich until we observe them as red clump stars. To account for the random onset time of lithium production  for stars on the giant branch, we made 1,000 Monte Carlo draws from a uniform distribution in time for each observed star, where the lower bound is the time of the luminosity bump and the upper bound is the time of the red giant branch tip. In Figure~\ref{fig:grid_search} we show the goodness-of-fit $\chi_r^2$ from a grid search of trialled weights and depletion timescales for scenario (c). 
 
-If we only consider lithium depletion timescales and weighting fractions that are consistent with our 95\% confidence interval of fraction of core helium burning stars ($f_{\rm CHeB} = 0.80^{+0.07}_{-0.06}$), we find that a lithium depletion timescale of about $2\times 10^{6}\,{\rm yr}$ with a relative formation rate of red giant branch stars to core-helium burning stars of 0.6:1.0 ($w_{rgb}/w_{cheb} = 0.6$) is preferred with $\chi_r^2 = 0.6$, and provides reasonable agreement with the data (Figure~\ref{fig:evtracks}c). For comparison, $\chi_r^2$ values between 1.9 and 8.4 were found for all timescales considered in scenario (a), and between $\chi_r^2$ = 1.5 and 10 for those in scenario (b).
+If we only consider lithium depletion timescales and weighting fractions that are consistent with our 95\% confidence interval of fraction of core helium burning stars ($f_\mathrm{CHeB} = 0.80^{+0.07}_{-0.06}$), we find that a lithium depletion timescale of about $2\times 10^{6}\,{\rm yr}$ with a relative formation rate of red giant branch stars to core-helium burning stars of 0.6:1.0 ($w_{RGB}/w_{CHeB} = 0.6$) is preferred with $\chi_r^2 = 0.6$, and provides reasonable agreement with the data (Figure~\ref{fig:evtracks}c). For comparison, $\chi_r^2$ values between 1.9 and 8.4 were found for all timescales considered in scenario (a), and between $\chi_r^2$ = 1.5 and 10 for those in scenario (b).
 In Section~\ref{sec:discussion} we discuss physical mechanisms that are consistent with scenario (c).
  
 
@@ -396,7 +387,7 @@ In Section~\ref{sec:discussion} we discuss physical mechanisms that are consiste
 
 \begin{figure}
 	\includegraphics[width=0.5\textwidth]{figures/ref_bump_plus_8_scenario_c_grid_search.pdf}
-	\caption{The preferred  lithium depletion timescale in scenario (c) is about $10^6$\,yr. Goodness of fit (reduced $\chi^2$) for a grid search of lithium depletion timescales and weighting ratios. Semi-transparent points indicate that the combination of weight and depletion time predicted core-helium burning fractions that are outside our 95\% confidence interval of $80^{+7}_{-6}$\,\%, and therefore inconsistent.  The preferred model ($w_{rgb}/w_{cheb} = 0.6$, $t_{depletion} = 10^{6.3}\,{\rm yr}$ or $2\times10^6\,{\rm yr}$), with $\chi_r^2 = 0.6$, is marked.}
+	\caption{The preferred  lithium depletion timescale in scenario (c) is about $10^6$\,yr. Goodness of fit (reduced $\chi^2$) for a grid search of lithium depletion timescales and weighting ratios. Semi-transparent points indicate that the combination of weight and depletion time predicted core-helium burning fractions that are outside our 95\% confidence interval of $80^{+7}_{-6}$\,\%, and therefore inconsistent.  The preferred model ($w_\mathrm{rgb}/w_\mathrm{cheb} = 0.6$, $t_{depletion} = 10^{6.3}\,{\rm yr}$ or $2\times10^6\,{\rm yr}$), with $\chi_r^2 = 0.6$, is marked.}
 	\label{fig:grid_search}
 \end{figure}
 
@@ -415,7 +406,7 @@ asteroseismic analyses.
 We find that lithium-rich giant stars occur more frequently with higher stellar 
 metallicity ($[{\rm Fe/H}]$; Figure~\ref{fig:mdf_frequency}). This result 
 reconciles tension between the low frequencies of lithium-rich giants reported 
-in metal-poor environments with well-known completeness statistics \citep{Kirby_2016} 
+in metal-poor environments with well-understood completeness statistics \citep{Kirby_2016} 
 (e.g., $0.3 \pm 0.1$\% for isolated systems with $[{\rm Fe/H}] \lesssim -0.8$), 
 as compared to field studies of metal-rich stars \citep{Brown_1989} (e.g., $1$ to $2$\%). 
 This result has not been observed elsewhere likely because of the heterogeneous and 
@@ -436,6 +427,7 @@ relationship (or any other observable) from compounding selection effects.
 	\label{fig:mdf_frequency}
 \end{figure} 
 
+\subsection{Selection effects}
 
 We critically evaluated whether the \lamost\ target selection function could 
 make us more or less likely to observe a lithium-rich giant star, and whether
@@ -463,13 +455,14 @@ do not show a significant bias in population properties \citep{Liu_2017}.
 
 
 If we discard selection effects within \lamost\ as negligible, then there may still
-be lithium-rich giant stars that we do not detect due to a weakened $A({\rm Li})$
+be lithium-rich giant stars that we do not detect due to a weakened Li 
 line at higher effective temperatures. This is shown in Figure~\ref{fig:li_distribution},
 which indicates a possible lack of lithium-rich giants with $A({\rm Li}) = 1.5$ to $2.0$
 and about $T_{\rm eff} > 5000\,{\rm K}$. It is possible that our $3\sigma$ detection
 threshold means that we do not discover all lithium-rich sub-giant stars with $A({\rm Li}) = 1.5$ to $2.0$, which could imply that we do not detect all sub-giants that have become lithium-rich due to the engulfment of a close-in giant planet \citep{Casey_2016}. However, because our timescale modelling begins near the luminosity bump, if a selection effect is present it will not
 affect our inferences on the lithium depletion timescale.
 
+\subsection{Mechanisms and Interpretation}
 
 Given a lithium depletion timescale and an occurrence rate of lithium-rich giants,
 we can estimate the typical rate at which lithium-rich giants form 
@@ -520,7 +513,7 @@ This would suggest that lithium enrichment is not a consequence of single star e
 
 We find that the data are only consistent with scenario (c), where giant stars can become
 lithium-rich at the core-helium burning phase or at a random time on the giant
-branch. While we do find a relative weighting ($w_{rgb}/w_{cheb} = 0.6$) and lithium
+branch. While we do find a relative weighting ($w_\mathrm{RGB}/w_\mathrm{CHeB} = 0.6$) and lithium
 depletion timescale ($2\times10^6\,{\rm yr}^{-1}$) that can reproduce the
 observations, we have yet to argue for any lithium enrichment mechanisms that 
 could occur randomly on the giant branch, or at the start of the core-helium
@@ -785,6 +778,7 @@ companion is expected to fully deplete the beryllium inside a star \citep{Sackma
 
 \acknowledgments
 
+We thank David W. Hogg (NYU).
 A.~R.~C. is supported through an Australian Research Council Discovery Project under grant DP160100637. 
 % TODO: ARC ARC DECRA?
 A.~Y.~Q.~H. is grateful to the community at the MPIA for their support and hospitality during the period in which much of this work was performed. 
